@@ -1,0 +1,46 @@
+<script type="text/javascript">
+    RED.nodes.registerType('azure-iotdt-bridge',{
+        category: 'input',
+        color: '#C0DEED',
+        defaults: {
+            name: {value:""},
+            DigitalTwinApiUrl: {value:"", required:true},
+            clientId: {value:"", required:true},
+            clientSecret: {value:"", required:true},
+            authorityHostUrl: {value:"", required:true}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "bridge.png",
+        label: function() {
+            return this.name||"azure-iotdt-bridge";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="azure-iotdt-bridge">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-DigitalTwinApiUrl"><i class="icon-tag"></i> Digital Twin API URL</label>
+        <input type="text" id="node-input-DigitalTwinApiUrl" placeholder="https://[yourInstance].[yourLocation].azuresmartspaces.net/management/">
+    </div>
+    <div class="form-row">
+        <label for="node-input-clientId"><i class="icon-tag"></i> Client ID</label>
+        <input type="text" id="node-input-clientId" placeholder="">
+    </div>
+    <div class="form-row">
+        <label for="node-input-clientSecret"><i class="icon-tag"></i> Client Secret</label>
+        <input type="text" id="node-input-clientSecret" placeholder="">
+    </div>
+    <div class="form-row">
+        <label for="node-input-authorityHostUrl"><i class="icon-tag"></i> Authority Host URL</label>
+        <input type="text" id="node-input-authorityHostUrl" placeholder="https://login.microsoftonline.com/[yourtenant]/oauth2/token">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="azure-iotdt-bridge">
+    <p>This node wraps the IoT Digital Twin Bridge</p>
+</script>
