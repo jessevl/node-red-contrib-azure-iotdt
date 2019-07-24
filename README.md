@@ -26,7 +26,7 @@ Take the following steps to deploy the module to Node-RED and set up the device 
 3. Open up Node-RED and notice that 'Azure IoTDT Bridge' will show up in the nodes list on the left. Drag the node onto the canvas and double click it to configure your IoTDT connection credentials from step 2.
   ![Configure Node](assets/screenshot-configurenode.png "Configure Node")
 
-4. The Node is now ready to use. External systems can feed device data through this device bridge node and into your IoT Central app by sending telemetry in the payload of messages into the input of the node. 
+4. The Node is now ready to use. External systems can feed device data through this device bridge node and into your IoT Device Twin isntance by sending telemetry in the payload of messages into the input of the node. 
   ![Sample telemetry simulators connected to the node](assets/screenshot-module.png "Sample telemetry simulators connected to the node.")
 
 Messages sent to the device bridge node must have the following format in the payload:
